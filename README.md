@@ -92,3 +92,30 @@ If you ever want to test if cleanup.service logic actually works without waiting
 systemctl start cleanup.service
 ```
 This runs the script immediately regardless of the timer schedule.
+
+## Stopping and Deleting Systemd Units & Timers
+- Stop and delete the **.timer** first
+```ini
+sudo systemctl stop cleanup.timer
+# then
+sudo systemctl disable cleanup.timer
+```
+
+- Stop and delete the **.service**
+```ini
+sudo systemctl stop cleanup.service
+# then
+sudo systemctl disable cleanup.service
+```
+
+- Delete actual .service and .timer files in `/etc/systemd/system/`
+```ini
+cd /etc/systemd/system/
+# then
+sudo rm {cleanup.timer, cleanup.service}
+```
+
+- Finally, reload systemctl with new changes
+```ini
+sudo systemctl daemon-reload
+```
