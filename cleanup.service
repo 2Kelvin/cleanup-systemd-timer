@@ -3,4 +3,4 @@ Description=Delete old log archives monthly
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/cleanup-tool /var/log
+ExecStart=/usr/local/bin/cleanup-tool /var/backups/my-logs-backup-folder 
