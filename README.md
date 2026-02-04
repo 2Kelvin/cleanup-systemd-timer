@@ -86,7 +86,7 @@ To verify the status of your timer and check when it is scheduled to run next, u
 | `systemctl status cleanup.timer` | Check if the timer is active and "waiting." |
 | `journalctl -u cleanup.service` | View the execution logs/output of the cleanup script. |
 
-## 🔍 Pro-tip: Dry run
+## Pro-tip: Dry run
 If you ever want to test if cleanup.service logic actually works without waiting an entire month for the timer to trigger, you can manually trigger the service part alone like this:
 ```bash
 systemctl start cleanup.service
