@@ -1,0 +1,6 @@
+[Unit]
+Description=Delete old log archives monthly
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/cleanup-tool /var/log

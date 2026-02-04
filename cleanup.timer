@@ -1,0 +1,10 @@
+[Unit]
+Description=Run clean up of logs once every month
+
+[Timer]
+OnCalendar=monthly
+Persistent=true
+Unit=cleanup.service
+
+[Install]
+WantedBy=timers.target
