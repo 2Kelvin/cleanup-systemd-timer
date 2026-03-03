@@ -15,7 +15,7 @@ Follow these steps to clone the project and install the cleanup tool on your loc
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/2Kelvin/archives-cleanup.git
-# follow the project's guide for setup and installation
+# follow that project's readme for setup and installation
 ```
 
 ## ⚙️ Configuration
